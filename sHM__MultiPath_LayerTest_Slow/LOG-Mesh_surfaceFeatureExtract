@@ -1,0 +1,563 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _45e7c4a0-20241224 OPENFOAM=2412 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : surfaceFeatureExtract
+Date   : Feb 01 2025
+Time   : 01:11:47
+Host   : MyComputer
+PID    : 2043
+I/O    : uncollated
+Case   : /mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+Note: Feature line extraction only valid on closed manifold surfaces
+
+Reading surfaceFeatureExtractDict
+
+Surfaces     : Bo.stl
+Output       : Bo
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 76226 in 1 region(s)
+Vertices     : 38119
+Bounding Box : (-0.846976220608 -0.285889685154 0.059609990567) (1.78898394108 0.285883009434 1.12950003147)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 82
+    edges  : 3483
+    of which
+        region edges   : 0
+        external edges : 1148
+        internal edges : 2335
+
+Final Feature set:
+    points : 3459
+    of which
+        convex             : 22
+        concave            : 6
+        mixed              : 54
+        non-feature        : 3377
+    edges  : 3483
+    of which
+        external edges     : 1148
+        internal edges     : 2335
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo"
+Writing 22 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_convexFeaturePts.obj"
+Writing 6 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_concaveFeaturePts.obj"
+Writing 54 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_mixedFeaturePts.obj"
+Writing 54 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_mixedFeaturePtsStructure.obj"
+Writing 1148 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_externalEdges.obj"
+Writing 2335 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_regionEdges.obj"
+Writing 3483 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/Bo_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/Bo.eMesh"
+Surfaces     : FrBr.stl
+Output       : FrBr
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 496 in 1 region(s)
+Vertices     : 250
+Bounding Box : (-0.0900000035763 -0.564999997616 0.107000000775) (0.0900000035763 -0.560000002384 0.287000000477)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 0
+    edges  : 248
+    of which
+        region edges   : 0
+        external edges : 248
+        internal edges : 0
+
+Final Feature set:
+    points : 248
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 248
+    edges  : 248
+    of which
+        external edges     : 248
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr"
+Writing 0 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_mixedFeaturePtsStructure.obj"
+Writing 248 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_externalEdges.obj"
+Writing 0 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_regionEdges.obj"
+Writing 248 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrBr_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/FrBr.eMesh"
+Surfaces     : FrSUS.stl
+Output       : FrSUS
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 1342 in 1 region(s)
+Vertices     : 673
+Bounding Box : (-0.0772766470909 -0.535000026226 0.0980164036155) (0.16750459373 -0.184479296207 0.551907896996)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 11
+    edges  : 667
+    of which
+        region edges   : 0
+        external edges : 431
+        internal edges : 236
+
+Final Feature set:
+    points : 663
+    of which
+        convex             : 0
+        concave            : 4
+        mixed              : 7
+        non-feature        : 652
+    edges  : 667
+    of which
+        external edges     : 431
+        internal edges     : 236
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS"
+Writing 0 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_convexFeaturePts.obj"
+Writing 4 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_concaveFeaturePts.obj"
+Writing 7 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_mixedFeaturePts.obj"
+Writing 7 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_mixedFeaturePtsStructure.obj"
+Writing 431 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_externalEdges.obj"
+Writing 236 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_regionEdges.obj"
+Writing 667 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FrSUS_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/FrSUS.eMesh"
+Surfaces     : FT.stl
+Output       : FT
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 61564 in 1 region(s)
+Vertices     : 30775
+Bounding Box : (-0.203591197729 -0.671202719212 -3.15719699098e-16) (0.203591197729 -0.45305159688 0.400600105524)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 19
+    edges  : 2515
+    of which
+        region edges   : 8
+        external edges : 1177
+        internal edges : 1330
+
+Final Feature set:
+    points : 2498
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 19
+        non-feature        : 2479
+    edges  : 2515
+    of which
+        external edges     : 1177
+        internal edges     : 1330
+        flat edges         : 0
+        open edges         : 8
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT"
+Writing 0 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_concaveFeaturePts.obj"
+Writing 19 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_mixedFeaturePts.obj"
+Writing 19 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_mixedFeaturePtsStructure.obj"
+Writing 1177 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_externalEdges.obj"
+Writing 1330 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_flatEdges.obj"
+Writing 8 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_multipleEdges.obj"
+Writing 8 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_regionEdges.obj"
+Writing 2515 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FT_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/FT.eMesh"
+Surfaces     : FW.stl
+Output       : FW
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 38354 in 1 region(s)
+Vertices     : 19155
+Bounding Box : (-0.822909414768 -0.704274475574 0.0560000017285) (-0.210409402847 0.704274475574 0.351872086525)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 268
+    edges  : 4652
+    of which
+        region edges   : 0
+        external edges : 2458
+        internal edges : 2194
+
+Final Feature set:
+    points : 4485
+    of which
+        convex             : 54
+        concave            : 4
+        mixed              : 210
+        non-feature        : 4217
+    edges  : 4652
+    of which
+        external edges     : 2458
+        internal edges     : 2194
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW"
+Writing 54 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_convexFeaturePts.obj"
+Writing 4 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_concaveFeaturePts.obj"
+Writing 210 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_mixedFeaturePts.obj"
+Writing 210 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_mixedFeaturePtsStructure.obj"
+Writing 2458 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_externalEdges.obj"
+Writing 2194 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_regionEdges.obj"
+Writing 4652 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/FW_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/FW.eMesh"
+Surfaces     : RrBr.stl
+Output       : RrBr
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 496 in 1 region(s)
+Vertices     : 250
+Bounding Box : (1.46050000191 -0.59500002861 0.107000097632) (1.64049994946 -0.589999973774 0.287000089884)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 0
+    edges  : 248
+    of which
+        region edges   : 0
+        external edges : 248
+        internal edges : 0
+
+Final Feature set:
+    points : 248
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 0
+        non-feature        : 248
+    edges  : 248
+    of which
+        external edges     : 248
+        internal edges     : 0
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr"
+Writing 0 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_concaveFeaturePts.obj"
+Writing 0 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_mixedFeaturePts.obj"
+Writing 0 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_mixedFeaturePtsStructure.obj"
+Writing 248 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_externalEdges.obj"
+Writing 0 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_regionEdges.obj"
+Writing 248 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrBr_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/RrBr.eMesh"
+Surfaces     : RrSUS.stl
+Output       : RrSUS
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 2240 in 1 region(s)
+Vertices     : 1128
+Bounding Box : (1.33550000191 -0.569999992847 0.113000698388) (1.66812205315 -0.054999999702 0.600983321667)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 14
+    edges  : 1131
+    of which
+        region edges   : 0
+        external edges : 792
+        internal edges : 339
+
+Final Feature set:
+    points : 1122
+    of which
+        convex             : 4
+        concave            : 5
+        mixed              : 5
+        non-feature        : 1108
+    edges  : 1131
+    of which
+        external edges     : 792
+        internal edges     : 339
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS"
+Writing 4 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_convexFeaturePts.obj"
+Writing 5 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_concaveFeaturePts.obj"
+Writing 5 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_mixedFeaturePts.obj"
+Writing 5 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_mixedFeaturePtsStructure.obj"
+Writing 792 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_externalEdges.obj"
+Writing 339 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_regionEdges.obj"
+Writing 1131 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RrSUS_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/RrSUS.eMesh"
+Surfaces     : RT.stl
+Output       : RT
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 61522 in 1 region(s)
+Vertices     : 30789
+Bounding Box : (1.34690904617 -0.696209609509 5.09748493416e-15) (1.7540910244 -0.47803530097 0.400600105524)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 47
+    edges  : 2551
+    of which
+        region edges   : 152
+        external edges : 1154
+        internal edges : 1245
+
+Final Feature set:
+    points : 2507
+    of which
+        convex             : 0
+        concave            : 0
+        mixed              : 47
+        non-feature        : 2460
+    edges  : 2551
+    of which
+        external edges     : 1154
+        internal edges     : 1245
+        flat edges         : 0
+        open edges         : 152
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT"
+Writing 0 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_convexFeaturePts.obj"
+Writing 0 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_concaveFeaturePts.obj"
+Writing 47 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_mixedFeaturePts.obj"
+Writing 47 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_mixedFeaturePtsStructure.obj"
+Writing 1154 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_externalEdges.obj"
+Writing 1245 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_flatEdges.obj"
+Writing 152 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_multipleEdges.obj"
+Writing 152 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_regionEdges.obj"
+Writing 2551 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RT_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/RT.eMesh"
+Surfaces     : RW.stl
+Output       : RW
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 19772 in 1 region(s)
+Vertices     : 9882
+Bounding Box : (1.09746396542 -0.524713218212 0.576828896999) (2.0882499218 0.524713218212 1.21800005436)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 52
+    edges  : 1780
+    of which
+        region edges   : 0
+        external edges : 1048
+        internal edges : 732
+
+Final Feature set:
+    points : 1762
+    of which
+        convex             : 16
+        concave            : 4
+        mixed              : 32
+        non-feature        : 1710
+    edges  : 1780
+    of which
+        external edges     : 1048
+        internal edges     : 732
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 0
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW"
+Writing 16 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_convexFeaturePts.obj"
+Writing 4 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_concaveFeaturePts.obj"
+Writing 32 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_mixedFeaturePts.obj"
+Writing 32 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_mixedFeaturePtsStructure.obj"
+Writing 1048 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_externalEdges.obj"
+Writing 732 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_openEdges.obj"
+Writing 0 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_multipleEdges.obj"
+Writing 0 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_regionEdges.obj"
+Writing 1780 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/RW_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/RW.eMesh"
+Surfaces     : SW.stl
+Output       : SW
+Load options : offset
+Write options: writeObj=yes writeVTK=off
+
+Statistics:
+Triangles    : 4372 in 1 region(s)
+Vertices     : 2188
+Bounding Box : (0.152145802975 -0.700494110584 0.0559832714498) (1.41166901588 -0.170000001788 0.532000005245)
+
+Constructing feature set from included angle 150
+Selecting edges based purely on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial Feature set:
+    points : 60
+    edges  : 1880
+    of which
+        region edges   : 1
+        external edges : 997
+        internal edges : 882
+
+Final Feature set:
+    points : 1849
+    of which
+        convex             : 28
+        concave            : 4
+        mixed              : 28
+        non-feature        : 1789
+    edges  : 1880
+    of which
+        external edges     : 999
+        internal edges     : 880
+        flat edges         : 0
+        open edges         : 0
+        multiply connected : 1
+
+Writing extendedFeatureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW.extendedFeatureEdgeMesh"
+
+Writing extendedEdgeMesh components to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW"
+Writing 28 convex feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_convexFeaturePts.obj"
+Writing 4 concave feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_concaveFeaturePts.obj"
+Writing 28 mixed feature points to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_mixedFeaturePts.obj"
+Writing 28 mixed feature point structure to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_mixedFeaturePtsStructure.obj"
+Writing 999 external edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_externalEdges.obj"
+Writing 880 internal edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_internalEdges.obj"
+Writing 0 flat edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_flatEdges.obj"
+Writing 0 open edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_openEdges.obj"
+Writing 1 multiple edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_multipleEdges.obj"
+Writing 1 region edges to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_regionEdges.obj"
+Writing 1880 edge directions to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/extendedFeatureEdgeMesh/SW_edgeDirections.obj"
+
+Writing featureEdgeMesh to "/mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel/constant/triSurface/SW.eMesh"
+ExecutionTime = 0.97 s  ClockTime = 3 s
+
+End
+
