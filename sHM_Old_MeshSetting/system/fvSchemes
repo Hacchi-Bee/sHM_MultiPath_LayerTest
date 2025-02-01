@@ -29,28 +29,24 @@ gradSchemes
 divSchemes
 {
     default Gauss linearUpwindV unlimited;
-    div(phi,U) bounded Gauss localBlended upwind linearUpwindV grad(U);
+    div(phi,U) bounded Gauss linearUpwindV grad(U);
     div(phi,k) bounded Gauss linearUpwind limitedGrad;
-    div(((rho*nuEff)*dev2(T(grad(U))))) Gauss linear;
+    div((nuEff*dev2(T(grad(U))))) Gauss linear;
     div(phi,omega) bounded Gauss linearUpwind limitedGrad;
-    div(div(phi,U)) bounded Gauss localBlended upwind linearUpwindV grad(U);
+    div(div(phi,U)) Gauss linear;
 }
 
 laplacianSchemes
 {
-    default Gauss linear limited corrected 0.5;
-    laplacian((rho*nuEff),U) Gauss linear limited corrected 0.5;
-    laplacian((rhoRef|A(U)),p) relaxedNonOrthoGauss linear limited corrected 0.5;
-    laplacian(1,p) Gauss linear corrected;
-    laplacian(1,Phi)  Gauss linear corrected;
+    default Gauss linear limited 0.5;
+    laplacian(1,p) Gauss linear limited 0.5;
+    laplacian(1,Phi)  Gauss linear limited 0.5;
     laplacian(diffusivity,cellDisplacement) Gauss linear corrected;
 }
 
 interpolationSchemes
 {
     default linear;
-    interpolate(HbyA) linear;
-    interpolate(U) linear;
 }
 
 snGradSchemes
