@@ -1,0 +1,103 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    arch        "LSB;label=32;scalar=64";
+    class       volScalarField;
+    location    "0";
+    object      omega;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 0 -1 0 0 0 0];
+
+internalField   uniform 3.375;
+
+boundaryField
+{
+    inlet
+    {
+        diameterFraction 0.07;
+        mixingLengthSet true;
+        type            autoTurbulentMixingLengthFrequencyInlet;
+        mixingLength    1.12;
+        phi             phi;
+        k               k;
+        value           uniform 1;
+    }
+
+    outlet
+    {
+        type            inletOutlet;
+        inletValue      $internalField;
+        value           $internalField;
+    }
+
+    Ground
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+    Sky
+    {
+        type            slip;
+    }
+
+    SideWall
+    {
+        type            slip;
+    }
+
+    Symmetry
+    {
+        type symmetryPlane;
+    }
+
+    CARGroup
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+    Front_Tire
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+    Rear_Tire
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+    FrBr
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+    RrBr
+    {
+        type            omegaWallFunction;
+        blending        stepwise;
+        value           $internalField;
+    }
+
+}
+
+
+// ************************************************************************* //
