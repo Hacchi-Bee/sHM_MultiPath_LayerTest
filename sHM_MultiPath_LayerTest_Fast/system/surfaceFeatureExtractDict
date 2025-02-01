@@ -1,0 +1,137 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeatureExtractDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+Bo.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+FrBr.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+FrSUS.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+FT.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+FW.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+RrBr.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+RrSUS.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+RT.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+RW.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+SW.stl
+{
+    extractionMethod    extractFromSurface;
+    includedAngle       150;
+    subsetFeatures
+    {
+        nonManifoldEdges       no;
+        openEdges       yes;
+    }
+    writeObj            yes;
+}
+
+// ************************************************************************* //

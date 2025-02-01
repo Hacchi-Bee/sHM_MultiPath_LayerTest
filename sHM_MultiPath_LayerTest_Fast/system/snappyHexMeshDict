@@ -1,0 +1,481 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2412                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      snappyHexMeshDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+castellatedMesh true;
+snap            true;
+addLayers       true;
+mergePatchFaces false; 
+
+geometry
+{
+    Bo.stl
+    {
+        type triSurfaceMesh;
+        name Bo;
+    }
+
+    FrBr.stl
+    {
+        type triSurfaceMesh;
+        name FrBr;
+    }
+
+    FrSUS.stl
+    {
+        type triSurfaceMesh;
+        name FrSUS;
+    }
+
+    FT.stl
+    {
+        type triSurfaceMesh;
+        name Front_Tire;
+    }
+
+    FW.stl
+    {
+        type triSurfaceMesh;
+        name FW;
+    }
+
+    RrBr.stl
+    {
+        type triSurfaceMesh;
+        name RrBr;
+    }
+
+    RrSUS.stl
+    {
+        type triSurfaceMesh;
+        name RrSUS;
+    }
+
+    RT.stl
+    {
+        type triSurfaceMesh;
+        name Rear_Tire;
+    }
+
+    RW.stl
+    {
+        type triSurfaceMesh;
+        name RW;
+    }
+
+    SW.stl
+    {
+        type triSurfaceMesh;
+        name SW;
+    }
+
+    Lv6_Ground
+    {
+        type box;
+        min  (-20 -0.9 0.0);
+        max  (2.5  0 0.05);
+    }
+
+    Lv2
+    {
+        type box;
+        min  (-16 -3 0.0);
+        max  (500 0 4);
+    }
+
+    Lv3
+    {
+        type box;
+        min  (-16 -3 0.0);
+        max  (50 0 4);
+    }
+
+    Lv5
+    {
+        type box;
+        min  (-2 -1.8 0.0);
+        max  (7 0 2);
+    }
+
+    Lv7-1
+    {
+        type box;
+        min  (1 -0.6 0.0);
+        max  (2.2  0 1.25);
+    }
+
+    Lv7-2
+    {
+        type box;
+        min  (-1 -0.9 0.0);
+        max  (2  0 0.75);
+    }
+
+    FTire_Patch
+    {
+        type box;
+        min  (-0.1 -0.675 0.0);
+        max  (0.1  -0.45 0.015);
+    }
+
+    RTire_Patch
+    {
+        type box;
+        min  (1.4505 -0.7 0.0);
+        max  (1.6505  -0.475 0.015);
+    }
+
+}
+
+castellatedMeshControls
+{
+    maxLocalCells 40000000;
+    maxGlobalCells 100000000;
+    minRefinementCells 1;
+    maxLoadUnbalance 0.2;
+    nCellsBetweenLevels 3;
+    useLeakClosure false;
+    handleSnapProblems true;
+    useTopologicalSnapDetection true;
+    allowFreeStandingZoneFaces true;
+    resolveFeatureAngle 35;
+    locationInMesh (7 -2 3);
+
+    features
+    (
+        {
+            file "Bo.eMesh";
+            level 9;
+        }
+        {
+            file "FrBr.eMesh";
+            level 9;
+        }
+        {
+            file "FrSUS.eMesh";
+            level 9;
+        }
+        {
+            file "FT.eMesh";
+            level 9;
+        }
+        {
+            file "FW.eMesh";
+            level 10;
+        }
+        {
+            file "RrBr.eMesh";
+            level 9;
+        }
+        {
+            file "RrSUS.eMesh";
+            level 9;
+        }
+        {
+            file "RT.eMesh";
+            level 9;
+        }
+        {
+            file "RW.eMesh";
+            level 10;
+        }
+        {
+            file "SW.eMesh";
+            level 9;
+        }
+    );
+
+    refinementSurfaces
+    {
+        Bo
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+        FrBr
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+            }
+        }
+        FrSUS
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+        Front_Tire
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+            }
+        }
+        FW
+        {
+            
+            level (9 10);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+        RrBr
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+            }
+        }
+        RrSUS
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+        Rear_Tire
+        {
+            
+            level (8 9);
+
+            patchInfo
+            {
+                type wall;
+            }
+        }
+        RW
+        {
+            
+            level (9 10);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+        SW
+        {
+            
+            level (9 9);
+
+            patchInfo
+            {
+                type wall;
+                inGroups (CARGroup);
+            }
+        }
+    }
+
+    refinementRegions
+    {
+        Lv6_Ground
+        {
+            mode inside;
+            levels ((1 6));
+        }
+        Lv2
+        {
+            mode inside;
+            levels ((1 2));
+        }
+        Lv3
+        {
+            mode inside;
+            levels ((1 3));
+        }
+        Lv5
+        {
+            mode inside;
+            levels ((1 5));
+        }
+        Lv7-1
+        {
+            mode inside;
+            levels ((1 7));
+        }
+        Lv7-2
+        {
+            mode inside;
+            levels ((1 7));
+        }
+        FTire_Patch
+        {
+            mode inside;
+            levels ((1 11));
+        }
+        RTire_Patch
+        {
+            mode inside;
+            levels ((1 11));
+        }
+    }
+
+}
+
+
+snapControls
+{
+    nSmoothPatch 2;
+    tolerance 2.0;
+    nSolveIter 5;
+    nRelaxIter 5;
+    nFeatureSnapIter 10;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap true;
+    stringFeatures true;
+    releasePoints false;
+    nFaceSplitInterval -1;
+    avoidDiagonal false;
+    strictRegionSnap false;
+    concaveAngle 45;
+    minAreaRatio 0.3;
+}
+
+addLayersControls
+{
+    relativeSizes true;
+
+    layers
+    {
+        Bo
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.45;
+        }
+        FrBr
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.45;
+        }
+        FrSUS
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.45;
+        }
+        Front_Tire
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.35;
+        }
+        FW
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.55;
+        }
+        RrBr
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.45;
+        }
+        RrSUS
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.45;
+        }
+        Rear_Tire
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.35;
+        }
+        RW
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.55;
+        }
+        SW
+        {
+            nSurfaceLayers 2;
+            finalLayerThickness 0.55;
+        }
+        Ground
+        {
+            nSurfaceLayers 3;
+        }
+    }
+
+    expansionRatio 1.0;
+    finalLayerThickness 0.3;
+    minThickness 0.0001;
+    nGrow 0;
+    featureAngle 180;
+    slipFeatureAngle 75;
+    disableWallEdges false;
+    nRelaxIter 4;
+    nSmoothSurfaceNormals 3;
+    nSmoothNormals 3;
+    nSmoothThickness 2;
+    nSmoothDisplacement 12;
+    nMedialAxisIter 1000;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter 15;
+    additionalReporting true;
+    nOuterIter      3;
+    meshShrinker    displacementMotionSolver;
+    solver          displacementLaplacian;
+    displacementLaplacianCoeffs
+    {
+        diffusivity quadratic inverseDistance (Ground SW RW Rear_Tire RrSUS RrBr FW Front_Tire FrSUS FrBr Bo);
+    }
+}
+
+meshQualityControls
+{
+    #include "meshQualityDict"
+    minTetQuality 1e-30;
+}
+
+writeFlags
+(
+    scalarLevels
+    layerSets
+    layerFields
+);
+
+mergeTolerance 1e-6;
+
+// ************************************************************************* //
