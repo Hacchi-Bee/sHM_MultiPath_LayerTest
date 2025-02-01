@@ -1,0 +1,118 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _45e7c4a0-20241224 OPENFOAM=2412 version=2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : reconstructParMesh -constant -mergeTol 1e-6
+Date   : Feb 01 2025
+Time   : 14:20:13
+Host   : MyComputer
+PID    : 4717
+I/O    : uncollated
+Case   : /mnt/d/desktop/OpenFOAM/HarfCar_BestPractice_15ms_TasakiModel_Mesh2
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Merge individual processor meshes back into one master mesh.
+Use if the original master mesh has been deleted or the processor meshes
+have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge assuming correct, fully matched procBoundaries.
+
+Found 8 processor directories
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor0"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor1"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor2"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor3"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor4"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor5"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor6"
+    Reading database "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor7"
+
+Time = constant
+
+
+Writing merged mesh to "constant/polyMesh"
+
+Reconstructing addressing from processor meshes to the newly reconstructed mesh
+
+Processor 0
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor0"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor0/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 1
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor1"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor1/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 2
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor2"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor2/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 3
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor3"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor3/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 4
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor4"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor4/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 5
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor5"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor5/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 6
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor6"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor6/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+Processor 7
+Read processor mesh: "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor7"
+Writing addressing : "HarfCar_BestPractice_15ms_TasakiModel_Mesh2/processor7/constant/polyMesh"
+    pointProcAddressing
+    faceProcAddressing
+    cellProcAddressing
+    boundaryProcAddressing
+
+End
+
