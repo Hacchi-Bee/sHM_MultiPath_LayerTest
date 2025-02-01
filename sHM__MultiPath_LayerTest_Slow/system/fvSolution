@@ -84,15 +84,6 @@ SIMPLE
 {
     nNonOrthogonalCorrectors 1;
     consistent yes;
-    pRefCell 0;
-    pRefValue 0.0;
-    residualControl 
-    {
-        U 1e-06;
-        "p.*" 1e-06;
-        k 1e-06;
-        omega 1e-06;
-    }
 }
 
 potentialFlow
@@ -111,8 +102,6 @@ relaxationFactors
         U               0.7;
         k               0.3;
         omega           0.3;
-        "\(min\(\(\(.*\*mag\(SndGrad\(p\)\)\)\|\(\(.*\*mag\(snGradCorr\(p\)\)\)\+small\)\),one\)\*snGradCorr\(p\)\)" 0.3;
-        snGradCorr(p)   0.3;
     }
 }
 
